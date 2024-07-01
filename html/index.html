@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Ana" />
+    <meta name="keywords" content="bolsos, hechos a manos, casero, materiales, decoración, playa, complementos" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <title> DE SUR A SUR | España | Tienda de canastas</title>
+    <link rel="icon" type="image/x-icon" href="../media/img/logo_deSuraSur_negro.png" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../Script/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Todo el header es el menu de navegación  -->
+
+
+    <header class="header">
+        <a href="index.html">
+            <img src="../media/img/logo_deSuraSur_blanco.png" alt="Logo de SURaSUR en blanco" class="header__logo"
+                id="logoId">
+        </a>
+
+        <div class="cabecera__contenedor" id="contenedorHeader">
+
+        <button type="button" class="header__botonCerrar" id="botonCerrar"> <i class="fa-solid fa-x"></i> </button>
+        <nav class="header__nav">
+            <ul class="header__lista">
+
+                <a href="Canastas.html" class="header__linkLista">
+                    <li class="header__elementoLista">CANASTAS</li>
+                </a>
+                <a href="bolsos.html" class="header__linkLista">
+                    <li class="header__elementoLista">BOLSOS</li>
+                </a>
+                <a href="nosotros.html" class="header__linkLista">
+                    <li class="header__elementoLista">NOSOTROS</li>
+                </a>
+                <a href="contacto.html" class="header__linkLista">
+                    <li class="header__elementoLista">CONTACTO </li>
+                </a>
+
+                <li class="header__elementoLista header__elementoLista--desaparece">
+                    <button type="button" class="header__botonLista"  id="boton" ><i class="fa-solid fa-bars"></i></button>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        </div>
+
+
+    </header>
+
+
+    <main>
+
+<!-- ESTA ES UNA GRANDE SECCIÓN QUE CUENTA CON IMAGENES Y TEXTO DE EXPLICACIÓN -->
+
+        <section class="seccionVideo__contenido"></section>
+
+        <video muted loop autoplay class="video-fondo">
+
+            <!--Aqui habiamos metido video controls
+                                    pero no nos interesa que el usario tenga control entonces metenemos "muted loop autoplay"-->
+            <source src="../media/video/video_completo.MP4" type="video/mp4">
+            Tu navegador no puede visualizar este video
+        </video>
+
+
+        <h1 class="seccionVideo__titulo">Hecho a mano</h1>
+
+        </section>
+
+
+        <section class="seccionFotos__Carrusel">
+
+            <!-- <div class="textoFotos__contenedor"> -->
+
+            <h1 class="textoFotos__titulo"> Novedades</h1>
+            <!-- </div> -->
+
+            <button id="prevBoton" class="carousel-boton"><i class="fa-solid fa-caret-left"></i></button>
+
+            <div class="seccionImagenes__contenedor">
+
+                <img src="../media/img/sinfondo/canastas_carrusel_Mesa de trabajo 1-01.png"
+                    alt="Canasta Blanca XL blanca y croche" class="CanastasY_bolsos" id="imagen1">
+
+                <!-- <button type="button" class="textoImagen__boton">Más información</button> Es que aun no se si quiero el boton o que si clican en el bolso, les lleve a sus características -->
+                <img src="../media/img/sinfondo/canastas_carrusel_Mesa de trabajo 1-02.png"
+                    alt="Canasta Blanca XL blanca" class="CanastasY_bolsos" id="imagen2">
+
+                <img src="../media/img/sinfondo/canastas_carrusel_Mesa de trabajo 1-03.png"
+                    alt="Canasta cuadrada niña decoración turquesa y rosa" class="CanastasY_bolsos" id="imagen3">
+
+                <img src="../media/img/sinfondo/canastas_carrusel_Mesa de trabajo 1-04.png" alt="Canasta Azul XL"
+                    class="CanastasY_bolsos" id="imagen4">
+
+                <img src="../media/img/sinfondo/canastas_carrusel_Mesa de trabajo 1-05.png"
+                    alt="Canasta redonda cordon largo croche" class="CanastasY_bolsos" id="imagen5">
+
+                <img src="../media/img/sinfondo/canastas_carrusel_Mesa de trabajo 1-06.png"
+                    alt="Canasta cuadrada niña decoración beige" class="CanastasY_bolsos" id="imagen6">
+
+                <img src="../media/img/sinfondo/canastas_carrusel_Mesa de trabajo 1-07.png"
+                    alt="Canasta redondita mimbre mitad blanca" class="CanastasY_bolsos" id="imagen7">
+
+                <button id="nextBoton" class="carousel-boton"><i class="fa-solid fa-caret-right"></i></button>
+
+            </div>
+
+        </section>
+
+
+        <section class="SeccionImagenes_texto"> <!--sección materiales-->
+            <p class="tituloSeccion"> Un poquito más sobre de Sur a Sur..</p>
+
+
+            <section class="seccionImagenTexto">
+
+                <!-- <section class="SeccionImagenes"> -->
+
+                <picture>
+                    <source src="../media/img/canastaDetalle.jpg">
+                    <img src="../media/img/canastaDetalle.jpg" alt="Detalle material de la canasta"
+                        class="detalleCanasta">
+                </picture>
+
+                <picture>
+                    <source src="../media/img/canastaDetalle2.jpg">
+                    <img src="../media/img/canastaDetalle2.jpg" alt="Detalle canasta" class="detalleCanasta2">
+                </picture>
+
+                <!-- </seccion> -->
+
+
+                <!-- <div class="SeccionTexto"> -->
+                <h1 class="seccion__cardTitulo2">Su mimbre :</h1>
+                <p class="texto__contenedorCard">Las canastas de playa tejidas con mimbre son mucho más que simples
+                    accesorios; representan una fusión única entre la artesanía tradicional y el estilo contemporáneo.
+                    El mimbre, un material natural y versátil, ha sido utilizado durante siglos en la creación de cestas
+                    y canastas debido a su resistencia, flexibilidad y belleza natural.
+
+                    Descubre la belleza y la artesanía del mimbre en nuestras exclusivas canastas de playa, diseñadas
+                    para
+                    acompañarte en tus momentos de sol y mar con autenticidad y estilo.</p>
+            </section>
+
+            <button id="buttonMimbre" class="boton_secciones"> Ver más</button>
+            <!-- </div> -->
+
+
+
+
+            <section class="seccionImagenTexto2">
+
+                <!-- <section clas="SeccionImagenes"> -->
+
+                <picture>
+                    <source src="../media/img/croche1.jpg">
+                    <img src="../media/img/croche1.jpg" alt="Detalle material croche" class="detalleCroche">
+                </picture>
+
+                <picture>
+                    <source src="../media/img/croche2.jpg">
+                    <img src="../media/img/croche2.jpg" alt="Detalle croche" class="detalleCroche2">
+                </picture>
+
+                <!-- </section> -->
+
+
+                <h1 class="seccion__cardTitulo2">Croche y su decoración :</h1>
+                <p class="texto__contenedorCard">El croché, una técnica de tejido que utiliza un ganchillo para crear
+                    delicados patrones con hilo o fibra, se convierte en el lienzo perfecto para nuestra creatividad.
+<br>
+                    En el corazón de nuestras creaciones, el croché se entrelaza con detalles decorativos cuidadosamente
+                    seleccionados. Cada canasta está adornada con flecos, conchas marinas, cuentas brillantes y mandalas
+                    crochéticos, agregando un toque bohemio y playero a cada diseño.</p>
+            </section>
+
+            <button id="buttonCroche" class="boton_secciones"> Ver más</button>
+
+
+        </section>
+
+
+        <section class="SeccionFotografia">
+
+            <source src="../media/img/BolsitoCroche.jpg">
+            <img src="../media/img/BolsitoCroche.jpg" alt="Bolso croche decoración" class="BolsitoCroche">
+
+
+            <source src="../media/img/modelo1.jpg">
+
+            <!-- <a href="Canastas.html"> -->
+            <img src="../media/img/modelo1.jpg" alt="modelo llevado una canasta" class="Modelo1">
+            <!-- </a> -->
+
+
+            <source src="../media/img/fotoCanastaPlantas.jpg">
+            <img src="../media/img/fotoCanastaPlantas.jpg" alt="Canasta redonda con plantas secas"
+                class="CanastaPlantas">
+
+
+
+        </section>
+
+
+    </main>
+
+
+    
+
+<!-- AQUÍ comienza el footer -->
+
+    <footer class="seccionFooter_contenedor">
+
+        <button id="top" class="boton_arriba"> Subir </button>
+
+        <ul class="footer__lista">
+            <li>
+                <a href="https://www.instagram.com" class="footer__linkLista" target="_blank">Instagram</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" class="footer__linkLista" target="_blank">Facebook</a>
+            </li>
+            <li>
+                <a href="https://www.pinterest.es" class="footer__linkLista" target="_blank">Pinterest</a>
+            </li>
+        </ul>
+
+        <hr class="linea"> <!-- Esto es una linea horizontal -->
+
+
+        <div class="SeccionFooter--ContenedorTexto">
+
+            <p class="seccionFooter__frase">All rights reserved 2024 </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+</body>
+
+</html>
