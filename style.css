@@ -1,0 +1,465 @@
+@font-face {
+    font-family: Jost;
+    src: url("../fonts/Jost/Jost-VariableFont_wght.ttf");
+}
+* {
+    font-family: Jost;
+}
+
+:root {
+    --colorfondo: #c0ad8cab; 
+    --tamaño_fuente: 2rem;
+    --blanco: rgb(255, 255, 255);
+    --beige:rgb(216, 186, 145);
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header__logo{
+    width: 15rem;
+    height: 10rem;
+    margin: 0.5rem;
+}
+
+.header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgba(198, 176, 143); 
+    position: fixed;
+    width: 100%; 
+    height: 7rem;
+    top: 0;  
+    z-index: 1000;
+}
+
+.header__nav{
+        display: flex;
+        align-items: center;
+    }
+
+.header__linkLista{
+    text-decoration: none;
+    color: black;
+}
+.header__lista{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.header__elementoLista--desaparece{
+
+    display: none;
+
+    }
+    
+    @media screen and (max-width:768px){
+        .header__elementoLista{
+            display: none;
+        } 
+        .header__elementoLista--desaparece{
+            display: block;
+        }
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .header__elementoLista {
+            display: none; /* Ocultar elementos de la lista */
+        }
+    
+        .header__elementoLista--desaparece {
+            display: block; /* Mostrar el botón de menú */
+        }
+    
+        .header__nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color:rgb(199, 163, 120);
+            border-radius: 1rem;
+        }
+    }
+
+
+
+.header__elementoLista{
+
+    padding: 0.7rem 1.4rem;
+    border: 1rem solid transparent;
+    border-radius: 1rem;
+    transition: border-color 0.5s;
+    color: white;
+
+}
+
+.header__botonLista{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-family: Jost;
+    font-size: 1.3rem;
+    }
+
+    .header__botonCerrar{
+        cursor: pointer;
+        margin: 1rem;
+        border: none;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+        display: none;
+    }
+
+/* ESTOS SON LOS ESTILOS  para el menú lateral */
+
+.contenedorCabecera {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh; 
+    width: 100%; 
+    background-color: var(--beige); 
+    transition: transform 0.3s ease-in-out; 
+    transform: translateY(-100%); 
+    z-index: 999;
+}
+
+.contenedorCabecera.mostrar {
+    transform: translateY(0); 
+}
+
+/* Estilos para los elementos de navegación dentro del menú */
+.contenedorCabecera__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contenedorCabecera__item a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.video-fondo{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+} 
+
+.seccionVideo__contenido{
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-contenedor {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.seccionVideo__titulo{
+    position: absolute; 
+    color: var(--blanco);
+    opacity: 80%;
+    font-family: six;
+    font-size: 2.5rem;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.seccionFotos__Carrusel{
+    text-align: center;
+    position: relative; 
+    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+
+}
+.textoFotos__contenedor {
+    text-align: center; 
+    position: relative;
+    margin-top: 20px; 
+}
+
+.textoFotos__titulo{
+    font-family: Jost;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(169, 140, 102);
+    margin: 3rem;
+    position: absolute; 
+    top: 0; /* Así lo puedo situar del contenedor */
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+/* Estilos para las imagenes en el CARRUSEL */
+
+.seccionImagenes__contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem;
+    overflow: hidden; /* así oculto las imagenes que están fuera */
+    transition: transform 0.5s ease; 
+}
+
+.seccionImagenes__contenedor img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    transition: opacity 0.5s ease;
+}
+
+/* De esta forma oculto parte del carrusel que no quiero que se vea */
+.seccionImagenes__contenedor {
+    overflow-x: hidden;
+}
+
+/* Estilo para los botones/flechas del carrusel */
+
+.carousel-boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--beige);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+#prevBoton {
+    left: 10px; 
+}
+
+#nextBoton {
+    right: 10px; 
+}
+
+
+ .texto__contenedorTextos {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.tituloSeccion{
+font-family: Jost;
+font-size: 1.5rem;
+color: rgb(169, 140, 102);
+margin-left: 2rem;
+}
+
+
+
+
+/* Aquí comienzo una maquetación de imagenes junto a sus textos */
+
+ .SeccionImagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;
+}  
+
+ .seccionImagenTexto{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;
+} 
+
+.detalleCanasta {
+    object-fit: cover; 
+    grid-column: 1;
+    grid-row: 1;
+    height: 100vh;
+    width: 100%;
+}
+
+.detalleCanasta2 {
+    object-fit: cover;
+    grid-column: 2;
+    grid-row: 1;
+    height: 100vh;
+    width: 100%;
+}
+
+.seccionImagenTexto2{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;
+}
+
+.detalleCroche {
+    object-fit: cover; 
+    grid-column: 1;
+    grid-row: 1;
+    height: 100vh;
+    width: 100%;
+}
+
+.detalleCroche2 {
+    object-fit: cover;
+    grid-column: 2;
+    grid-row: 1;
+    height: 100vh;
+    width: 100%;
+}
+
+.seccion__cardTitulo2{
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 2rem;
+}
+
+.texto__contenedorCard{
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+}
+
+.boton_secciones {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 0px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    align-items: center;
+    /* margin-bottom: 2rem; */
+}
+
+.texto__contenedorCard {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 2rem;
+    position: relative; 
+}
+
+.seccion__cardTitulo2 {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 2rem;
+}
+
+.boton_secciones:hover {
+    background-color: var(--beige); 
+    color: white;
+}
+
+
+
+/* Esta es la sección de las 3 fotografías */
+
+.SeccionFotografia {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem; /* Espacio entre las columnass */
+
+}
+
+.BolsitoCroche{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.Modelo1{
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+.CanastaPlantas{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+.BolsitoCroche,
+.CanastaPlantas,
+.Modelo1 {
+    height: auto; 
+    width: 100%; 
+    object-fit: cover; 
+}
+
+
+
+
+/* Aquí comienza la SECCIÓN FOOTER */
+
+.linea{
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+
+.boton_arriba{
+    border: none;
+    color: black;
+    background-color:transparent;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.boton_arriba:hover {
+    background-color: var(--beige); 
+    color: white;
+}
+
+
+.seccionFooter__frase{
+    margin-left: 4rem;
+    margin-right: 3rem;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.footer__lista{
+right: 0;
+display: flex;
+justify-content: flex-end;
+list-style-type: none;
+margin-right: 2rem;
+}
+
+.footer__linkLista{
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: black;
+    margin: 2rem;
+}

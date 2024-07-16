@@ -1,0 +1,265 @@
+@font-face {
+    font-family: Jost;
+    src: url("../fonts/Jost/Jost-VariableFont_wght.ttf");
+}
+* {
+    font-family: Jost;
+}
+
+:root {
+    --colorfondo: #c0ad8cab; 
+    --tamaño_fuente: 2rem;
+    --blanco: rgb(255, 255, 255);
+    --beige:rgb(216, 186, 145);
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header__logo{
+    width: 15rem;
+    height: 10rem;
+    margin: 0.5rem;
+}
+
+.header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgba(198, 176, 143); 
+    position: fixed;
+    width: 100%; 
+    height: 7rem;
+    top: 0;  
+    z-index: 1000;
+}
+
+.header__nav{
+        display: flex;
+        align-items: center;
+    }
+
+.header__linkLista{
+    text-decoration: none;
+    color: black;
+}
+.header__lista{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.header__elementoLista--desaparece{
+    display: none;
+    /*Esto debe ponerse para que estando en pantalla
+     completa no aparezca la burger */
+    }
+    
+    @media screen and (max-width:768px){
+        .header__elementoLista{
+            display: none;
+        } 
+        .header__elementoLista--desaparece{
+            display: block;
+        }
+    }
+
+.header__elementoLista{
+    padding: 0.7rem 1.4rem;
+    border: 1rem solid transparent;
+    border-radius: 1rem;
+    transition: border-color 0.5s;
+    color: white;
+}
+
+.header__botonLista{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-family: Jost;
+    font-size: 1.3rem;
+    }
+
+
+/* ESTOS SON LOS ESTILOS  para el menú lateral */
+
+/* .contenedorCabecera {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh; 
+    width: 100%; 
+    background-color: var(--beige); 
+    transition: transform 0.3s ease-in-out; 
+    transform: translateY(-100%);
+    z-index: 999;
+}
+
+.contenedorCabecera.mostrar {
+    transform: translateY(0); 
+} */
+
+/* ESTILOS PARA LOS ELEMENTOS de navegación dentro del menú */
+.contenedorCabecera__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contenedorCabecera__item a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.seccionTexto__Fotos--Canastas{
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.titulo__Canastas{
+    font-size: 1.5rem;
+    margin: 1rem;
+    color:rgba(0, 0, 0, 0.846)
+}
+
+
+/* Aquí he generado un grid para poder estructurar las fotos de las canastas */
+
+.Seccion__fotos--canastas{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem; 
+    padding: 2rem;
+
+}
+
+.Seccion__fotos--canastas img {
+
+    height: auto;
+    width: 100%;
+    object-fit: cover; 
+
+}
+
+.precio {
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+}
+
+
+.CanastaBolsoM{
+
+    grid-column: 1;
+    grid-row: 1;
+
+}
+
+.CanastaFlecos{
+
+    object-fit: cover;
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+.Foto_CanastaFlecos{
+    display: none;
+}
+
+.CanastaCuadradaColor{
+
+    object-fit: cover;
+    grid-column: 3;
+    grid-row: 1;
+
+}
+
+.CanastaAzul{
+    object-fit: cover;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.CanastaNiña{
+    object-fit: cover;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.CanastaCroche{
+
+    object-fit: cover;
+    grid-column: 1;
+    grid-row: 3;
+
+}
+
+.CanastaNegra{
+    object-fit: cover;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+
+    /* Aqui comienza los estilos del footer */
+    .linea{
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    
+    
+    .boton_arriba{
+        border: none;
+        color: black;
+        background-color:transparent;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        padding: 10px 0px;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .boton_arriba:hover {
+        background-color: var(--beige); 
+        color: white;
+    }
+    
+    
+    .seccionFooter__frase{
+        margin-left: 4rem;
+        margin-right: 3rem;
+        font-size: 0.6rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    
+    .footer__lista{
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-right: 2rem;
+    }
+    
+    .footer__linkLista{
+        text-decoration: none;
+        font-size: 0.7rem;
+        color: black;
+        margin: 2rem;
+    }
+    
